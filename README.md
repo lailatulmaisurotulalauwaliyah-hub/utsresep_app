@@ -1,17 +1,49 @@
-# resep_app
+# Resep App
 
-A new Flutter project.
+Aplikasi resep makanan berbasis Flutter yang menampilkan data dari TheMealDB API.
+Dibuat untuk UTS Pemrograman Mobile (Praktikum Mobile Programming M).
 
-## Getting Started
+## Deskripsi
 
-This project is a starting point for a Flutter application.
+Resep App membantu pengguna mencari resep makanan, melihat daftar bahan, dan
+membaca cara memasaknya. Data diambil secara dinamis dari TheMealDB API.
 
-A few resources to get you started if this is your first Flutter project:
+## Fitur Utama
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Menampilkan daftar resep (gambar, nama, kategori, asal negara)
+- Pencarian resep berdasarkan kata kunci (bahasa Inggris, contoh: chicken, beef, cake)
+- Halaman detail: gambar, daftar bahan, dan cara memasak
+- Penanganan kondisi loading, success, dan error dengan FutureBuilder
+- Tombol "Coba Lagi" saat terjadi kesalahan koneksi
+- Terjemahan resep ke Bahasa Indonesia (opsional, hanya di Android/iOS)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Teknologi dan Package
+
+- Flutter dan Dart
+- [http](https://pub.dev/packages/http): mengirim permintaan HTTP ke API
+- [google_mlkit_translation](https://pub.dev/packages/google_mlkit_translation): terjemahan teks di perangkat
+- API: [TheMealDB](https://www.themealdb.com/api.php)
+
+## Struktur Folder
+
+lib/
+- models/ : class model (meal.dart)
+- services/ : pengambilan data API (meal_services.dart)
+- screens/ : halaman aplikasi (home_screen.dart, detail_screen.dart)
+- main.dart
+
+## Cara Menjalankan
+
+1. Pastikan Flutter SDK sudah terpasang
+2. Clone repositori:
+   git clone https://github.com/lailatulmaisurotulalauwaliyah-hub/utsresep_app.git
+3. Masuk ke folder project: cd utsresep_app
+4. Unduh dependensi: flutter pub get
+5. Jalankan di emulator/HP Android: flutter run
+
+Catatan: aplikasi membutuhkan koneksi internet.
+
+## Pembuat
+
+Nama: Lailatul Maisurotul Al Auwaliyah
+NIM: 240605110003
